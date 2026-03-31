@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+class Chessgame:
+   def __init__(self):
+       self.board=chess.Board()
+       self.engine=stockfish.Engine("/usr/local/bin/stockfish")
