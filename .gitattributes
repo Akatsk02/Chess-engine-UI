@@ -1,2 +1,0 @@
-git add .gitattributes
-git commit -m "Fix .gitattributes: remove code, normalize settings"
