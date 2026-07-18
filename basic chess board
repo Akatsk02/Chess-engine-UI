@@ -1,0 +1,22 @@
+import chess
+board = chess.Board()
+Result = None
+print("Starting position:")
+print(board)
+while not board.is_game_over():
+    player_move = input("\nEnter your move in UCI format (e.g., e2e4) /"
+    "and type q to quit: ").strip()
+    if player_move == 'q':
+        print("\nGame ended by user.")
+        Result="Game aborted (match inconclusive)"
+        break
+    try:
+        board.push_uci(player_move)
+        print("\nUpdated Board:")
+        print(board)
+    except ValueError:
+        print("Invalid or illegal move! Please try again.")
+print("\nGame over!")
+if Result is None:
+    Result = board.result()
+print("Result:", Result)
